@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page behave properly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSVP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Everything visible on the page -->
+    <main class="page">
+
+        <!-- The decorative foreground -->
+        <div class="rsvp-panel">
+
+            <div class="content">
+
+                <h1>You're Invited</h1>
+
+                <p class="intro">
+                    We would be delighted to have you join us.
+                </p>
+
+
+                <!-- Main attendee -->
+                <section class="person">
+
+                    <h2>Your Details</h2>
+
+                    <label for="main-name">Name</label>
+                    <input
+                        type="text"
+                        id="main-name"
+                        placeholder="Your name"
+                    >
+
+
+                    <h3>Part One</h3>
+
+                    <div class="choice-group">
+                        <button
+                            type="button"
+                            class="choice"
+                            data-person="main"
+                            data-part="one"
+                            data-value="yes"
+                        >
+                            Yes
+                        </button>
+
+                        <button
+                            type="button"
+                            class="choice"
+                            data-person="main"
+                            data-part="one"
+                            data-value="no"
+                        >
+                            No
+                        </button>
+                    </div>
+
+
+                    <h3>Part Two</h3>
+
+                    <div class="choice-group">
+                        <button
+                            type="button"
+                            class="choice"
+                            data-person="main"
+                            data-part="two"
+                            data-value="yes"
+                        >
+                            Yes
+                        </button>
+
+                        <button
