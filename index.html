@@ -13,70 +13,106 @@
 
 <body>
 
+    <!-- Fixed full-screen background image. Kept separate from .page so it
+         never scrolls, regardless of how tall the form gets. -->
+    <div class="background"></div>
+
     <!-- Everything visible on the page -->
     <main class="page">
 
-        <!-- The decorative foreground -->
-        <div class="rsvp-panel">
+        <!-- The scrollable, semi-transparent foreground -->
+        <div class="foreground">
 
-            <div class="content">
+            <!-- Decorative cap image, shown once at the top -->
+            <div class="foreground-top"></div>
 
-                <h1>You're Invited</h1>
+            <!-- Infinitely tileable section: grows to fit however much
+                 content (guests) ends up inside it -->
+            <div class="foreground-mid">
 
-                <p class="intro">
-                    We would be delighted to have you join us.
-                </p>
+                <div class="content">
 
+                    <h1>You're Invited</h1>
 
-                <!-- Main attendee -->
-                <section class="person">
+                    <p class="intro">
+                        We would be delighted to have you join us. Please let us
+                        know who's coming so we can plan accordingly.
+                    </p>
 
-                    <h2>Your Details</h2>
+                    <form id="rsvp-form" novalidate>
 
-                    <label for="main-name">Name</label>
-                    <input
-                        type="text"
-                        id="main-name"
-                        placeholder="Your name"
-                    >
+                        <!-- Guest blocks get inserted here. The first one
+                             (you) is added automatically by script.js; every
+                             "Add One More Guest" click appends another. -->
+                        <div id="guests-container"></div>
 
-
-                    <h3>Part One</h3>
-
-                    <div class="choice-group">
-                        <button
-                            type="button"
-                            class="choice"
-                            data-person="main"
-                            data-part="one"
-                            data-value="yes"
-                        >
-                            Yes
+                        <button type="button" id="add-guest-btn" class="add-guest-btn">
+                            + Add One More Guest
                         </button>
 
-                        <button
-                            type="button"
-                            class="choice"
-                            data-person="main"
-                            data-part="one"
-                            data-value="no"
-                        >
-                            No
+                        <p class="form-error" id="form-error" hidden></p>
+
+                        <button type="submit" id="submit-btn" class="submit-btn">
+                            Send RSVP
                         </button>
+
+                    </form>
+
+                    <!-- Shown in place of the form once the RSVP has been sent -->
+                    <div class="thank-you" id="thank-you" hidden>
+                        <h2>Thank You!</h2>
+                        <p>Your RSVP has been received. We can't wait to celebrate with you.</p>
                     </div>
 
+                </div>
 
-                    <h3>Part Two</h3>
+            </div>
 
-                    <div class="choice-group">
-                        <button
-                            type="button"
-                            class="choice"
-                            data-person="main"
-                            data-part="two"
-                            data-value="yes"
-                        >
-                            Yes
-                        </button>
+        </div>
 
-                        <button
+    </main>
+
+
+    <!-- Template for a single guest's fields. Cloned by script.js for the
+         main guest and every added plus-one, so there's one source of
+         truth for the markup. -->
+    <template id="guest-template">
+        <div class="guest">
+
+            <div class="guest-header">
+                <h2 class="guest-title">Your Details</h2>
+                <button type="button" class="remove-guest-btn" hidden>Remove</button>
+            </div>
+
+            <label class="field-label">Full Name</label>
+            <input type="text" class="guest-name" placeholder="Full name">
+
+            <div class="event-row">
+
+                <div class="event-field">
+                    <label class="field-label">Attending Event One</label>
+                    <div class="choice-group" data-part="one">
+                        <button type="button" class="choice" data-value="yes">Yes</button>
+                        <button type="button" class="choice" data-value="no">No</button>
+                    </div>
+                </div>
+
+                <div class="event-field">
+                    <label class="field-label">Attending Event Two</label>
+                    <div class="choice-group" data-part="two">
+                        <button type="button" class="choice" data-value="yes">Yes</button>
+                        <button type="button" class="choice" data-value="no">No</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <label class="field-label">Dietary Requirement</label>
+            <input type="text" class="guest-dietary" placeholder="e.g. none, vegetarian, gluten-free">
+
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
