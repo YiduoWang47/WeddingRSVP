@@ -20,7 +20,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: -2;
-    background-image: url("images/background.jpg");
+    background-image: url("static/images/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("images/foreground-tile.png");
+    background-image: url("static/images/foreground_tile.png");
     background-repeat: repeat-y;
     background-size: 100% auto;
     opacity: 0.9;
