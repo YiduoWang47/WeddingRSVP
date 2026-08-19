@@ -32,8 +32,8 @@ function addGuest() {
     const guestEl = guestsContainer.lastElementChild;
 
     guestEl.querySelector(".guest-title").textContent = isFirstGuest
-        ? "Your Details"
-        : `Guest ${guestCount}`;
+        ? "Details of Invited Guest"
+        : `Invited Guest ${guestCount}`;
 
     const removeBtn = guestEl.querySelector(".remove-guest-btn");
     if (isFirstGuest) {
