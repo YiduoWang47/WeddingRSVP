@@ -49,10 +49,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.9;
-    /* No margin/padding here and none on .foreground-mid below, so the
-       bottom edge of this image sits flush against the top of the tile
-       - the two pieces should read as one continuous graphic. */
+    opacity: 0.85;
 }
 
 .foreground-mid {
@@ -66,7 +63,7 @@ body {
     background-image: url("static/images/foreground_tile.png");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .content {
