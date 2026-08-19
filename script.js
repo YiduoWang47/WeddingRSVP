@@ -52,7 +52,7 @@ function renumberGuests() {
     guestEls.forEach((el, i) => {
         const position = i + 1;
         el.querySelector(".guest-title").textContent =
-            position === 1 ? "Your Details" : `Guest ${position}`;
+            position === 1 ? "Details of Invited Guest" : `Invited Guest ${position}`;
     });
 }
 
