@@ -46,8 +46,10 @@ body {
 }
 
 .foreground-top {
-    position: relative;
-    height: 220px;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
 }
 
 .foreground-top::before {
