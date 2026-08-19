@@ -40,7 +40,7 @@ body {
 
 .foreground {
     position: relative;
-    width: 640px;
+    width: 1280px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -58,7 +58,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: top center;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 .foreground-mid {
@@ -72,7 +72,7 @@ body {
     background-image: url("static/images/foreground_tile.png");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 .content {
