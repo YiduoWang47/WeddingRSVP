@@ -110,7 +110,7 @@ function collectGuestData() {
             throw new Error(`Please enter a name for ${label}.`);
         }
         if (!eventOneBtn || !eventTwoBtn) {
-            throw new Error(`Please answer both Event One and Event Two for ${label}.`);
+            throw new Error(`Please answer both Ceremony and Reception attendance for ${label}.`);
         }
 
         guests.push({
