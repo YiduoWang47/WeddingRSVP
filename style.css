@@ -273,12 +273,65 @@ h1 {
 
 
 /* ---------------------------------------------------------------- */
+/* Rose petals that trail the mouse                                  */
+/* ---------------------------------------------------------------- */
+ 
+.petal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background: linear-gradient(135deg, #f7b2c4, #d9506f);
+    /* two opposite corners rounded = a simple petal/teardrop shape */
+    border-radius: 0% 100% 0% 100%;
+    opacity: 0.9;
+    animation-name: petal-fall;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes petal-fall {
+    to {
+        transform: translate(var(--drift-x), var(--drift-y)) rotate(var(--spin));
+        opacity: 0;
+    }
+}
+ 
+
+/* ---------------------------------------------------------------- */
 /* Small screens                                                     */
 /* ---------------------------------------------------------------- */
 
 @media (max-width: 600px) {
     h1 {
         font-size: 32px;
+    }
+
+    .intro {
+        font-size: 18px;
+    }
+    .event-detail {
+        font-size: 18px;
+    }
+
+    .guest-title {
+        font-size: 22px;
+    }
+    .remove-guest-btn {
+        font-size: 18px;
+    }
+    .field-label {
+        font-size: 20px;
+    }
+    .guest input[type="text"] {
+        font-size: 18px;
+    }
+    .add-guest-btn {
+        font-size: 20px;
+    }
+    .submit-btn {
+        font-size: 20px;
     }
 
     .content {
