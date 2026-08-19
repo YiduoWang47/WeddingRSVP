@@ -49,18 +49,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.5;
-}
-
-.foreground-top::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("static/images/foreground_top.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: top center;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .foreground-mid {
@@ -74,7 +63,7 @@ body {
     background-image: url("static/images/foreground_tile.png");
     background-repeat: repeat-y;
     background-size: 100% auto;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .content {
