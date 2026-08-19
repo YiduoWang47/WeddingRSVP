@@ -131,7 +131,7 @@ h1 {
 
 .guest-title {
     font-family: Georgia, serif;
-    font-size: 22px;
+    font-size: 28px;
     margin: 0;
 }
 
@@ -139,7 +139,7 @@ h1 {
     background: none;
     border: none;
     color: #900;
-    font-size: 14px;
+    font-size: 22px;
     cursor: pointer;
     text-decoration: underline;
     padding: 4px;
@@ -152,6 +152,8 @@ h1 {
 .field-label {
     display: block;
     font-weight: bold;
+    font-family: Georgia, serif;
+    font-size: 24px;
     margin-bottom: 6px;
 }
 
@@ -162,7 +164,7 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .event-row {
@@ -192,7 +194,7 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.6);
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     transition: background 0.15s ease, color 0.15s ease;
 }
@@ -220,7 +222,7 @@ h1 {
     border: 1px dashed rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.35);
-    font-size: 15px;
+    font-size: 24px;
     cursor: pointer;
     transition: background 0.15s ease;
 }
@@ -239,7 +241,7 @@ h1 {
     display: block;
     width: 100%;
     padding: 14px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     border: none;
     border-radius: 4px;
