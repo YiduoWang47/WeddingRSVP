@@ -178,3 +178,42 @@ form.addEventListener("submit", async (event) => {
         showError("Sorry, something went wrong sending your RSVP. Please try again.");
     }
 });
+
+
+// ---------------------------------------------------------------------
+// Rose petals that trail the mouse
+// ---------------------------------------------------------------------
+let lastPetalTime = 0;
+const PETAL_INTERVAL = 60; // ms between spawns, so movement doesn't flood the page with petals
+
+document.addEventListener("mousemove", (event) => {
+    const now = Date.now();
+    if (now - lastPetalTime < PETAL_INTERVAL) return;
+    lastPetalTime = now;
+    spawnPetal(event.clientX, event.clientY);
+});
+
+function spawnPetal(x, y) {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+
+    const size = 8 + Math.random() * 8;       // 8-16px
+    const driftX = (Math.random() - 0.5) * 80; // sideways drift as it falls
+    const driftY = 60 + Math.random() * 60;    // always falls down
+    const spin = (Math.random() - 0.5) * 360;  // random rotation direction/amount
+    const duration = 1 + Math.random() * 0.8;  // 1-1.8s lifespan
+    const hueShift = Math.random() * 20 - 10;  // slight colour variation
+
+    petal.style.left = `${x - size / 2}px`;
+    petal.style.top = `${y - size / 2}px`;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size}px`;
+    petal.style.setProperty("--drift-x", `${driftX}px`);
+    petal.style.setProperty("--drift-y", `${driftY}px`);
+    petal.style.setProperty("--spin", `${spin}deg`);
+    petal.style.animationDuration = `${duration}s`;
+    petal.style.filter = `hue-rotate(${hueShift}deg)`;
+
+    document.body.appendChild(petal);
+    petal.addEventListener("animationend", () => petal.remove());
+}
