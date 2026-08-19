@@ -4,7 +4,7 @@
 // Paste the URL you get from deploying the Apps Script (see
 // apps-script.gs) as a Web App. It looks like:
 // https://script.google.com/macros/s/AKfycb.../exec
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXR5GPNlnmT0q9oOeSdDJPmWRBiReMlDMIBePFRWNqyjoCISep4qMIR_dWenXjbYQqZw/exec";
 
 
 // ---------------------------------------------------------------------
