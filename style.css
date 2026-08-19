@@ -92,6 +92,10 @@ h1 {
     margin: 0 0 32px;
 }
 
+.event-detail {
+    text-align: center;
+    margin: 0 0 32px;
+}
 
 /* ---------------------------------------------------------------- */
 /* Guest blocks - form has an "invisible back": no background of its */
