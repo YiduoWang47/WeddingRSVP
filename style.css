@@ -150,7 +150,7 @@ h1 {
     display: block;
     font-weight: bold;
     font-family: Georgia, serif;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 6px;
 }
 
@@ -319,7 +319,7 @@ h1 {
         font-size: 18px;
     }
     .field-label {
-        font-size: 20px;
+        font-size: 18px;
     }
     .guest input[type="text"] {
         font-size: 18px;
